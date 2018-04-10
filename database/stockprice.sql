@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50528
 File Encoding         : 65001
 
-Date: 2018-04-04 09:56:39
+Date: 2018-04-10 15:58:02
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -28,5 +28,10 @@ CREATE TABLE `stockprice` (
   `highprice` double NOT NULL COMMENT '最高价',
   `lowprice` double NOT NULL COMMENT '最低价',
   `matchqty` int(11) NOT NULL COMMENT '成交数量',
-  `matchamount` double NOT NULL COMMENT '成交金额'
+  `matchamount` double NOT NULL COMMENT '成交金额',
+  PRIMARY KEY (`tradedate`,`market`,`stockcode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- ----------------------------
+-- Records of stockprice
+-- ----------------------------
